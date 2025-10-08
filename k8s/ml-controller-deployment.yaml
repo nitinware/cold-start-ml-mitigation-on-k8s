@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dynamic-label-controller
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dynamic-label-controller
+  template:
+    metadata:
+      labels:
+        app: dynamic-label-controller
+    spec:
+      serviceAccountName: controller-sa
+      containers:
+      - name: controller
+        image: your-dockerhub-username/dynamic-label-controller:latest
+        command: ["python", "/controller/dynamic_label_controller.py"]
+        resources:
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
