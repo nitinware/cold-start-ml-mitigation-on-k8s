@@ -51,12 +51,7 @@ python controller/dynamic_label_controller.py
 
 ---
 
-## 7. GitHub Repository
-https://github.com/yourusername/cold-start-ml-mitigation-on-k8s
-
----
-
-## 8. Notes
+## 7. Notes
 - The dynamic pod labeling controller is generic: can be adapted to other readiness signals (HTTP/gRPC endpoints, metrics, event triggers)
 - Works in Minikube or production Kubernetes clusters
 - RBAC ensures minimal permissions and security
