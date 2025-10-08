@@ -47,7 +47,6 @@ kubectl get pods -l app=ml-model --show-labels
 
 ## 6. Optional: Local Testing
 python controller/dynamic_label_controller.py
-# Requires Python 3.10+ and 'kubernetes' package (pip install kubernetes)
 
 ---
 
